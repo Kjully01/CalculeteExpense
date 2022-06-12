@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CalculeteExpense</string>
+    <string name="total_gasoline">Total Gasolina:</string>
+    <string name="total_alcohol">Total Álcool:</string>
+    <string name="priceGasoline">Preço da gasolina</string>
+    <string name="price_alcohol">Preço do álcool</string>
+    <string name="calc">calcular</string>
+    <string name="distance">Distância a percorrer</string>
+    <string name="km_l">Km/L</string>
+    <string name="clear">Limpar</string>
 </resources>

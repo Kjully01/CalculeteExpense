@@ -6,71 +6,135 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etDistance"
-        android:layout_width="match_parent"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilDistance"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Distância a percorrer"
-        android:layout_marginTop="32dp"
         android:layout_marginHorizontal="32dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp"
+        android:hint="@string/distance"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etKm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Km/L"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etDistance"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etDistance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etGasolinePrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Preço da gasolina"
-        android:layout_marginTop="16dp"
-        android:layout_marginHorizontal="32dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etKm"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/etDieselPrice"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilKm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Preço do álcool"
-        android:layout_marginTop="16dp"
         android:layout_marginHorizontal="32dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:hint="@string/km_l"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etGasolinePrice"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilDistance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etKm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etDistance" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilGasolinePrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/priceGasoline"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilKm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etGasolinePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etKm" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilAlcoholPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/price_alcohol"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilGasolinePrice">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAlcoholPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etGasolinePrice" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnCalc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="calcular"
-        android:layout_marginTop="16dp"
         android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/adamina"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/calc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etDieselPrice"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ilAlcoholPrice" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/adamina"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCalc" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnCalc"
-        android:layout_marginTop="32dp">
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/btnClear">
 
         <include
             android:id="@+id/layoutResult"
-            layout="@layout/layout_result"/>
+            layout="@layout/layout_result" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,8 +29,8 @@ class MainActivity : AppCompatActivity() {
             totalGasoline.observe(this@MainActivity, Observer{
                 binding.layoutResult.tvInfoGasolinePrice.text = it.toString()
             })
-            totalDiesel.observe(this@MainActivity, Observer{
-                binding.layoutResult.tvInfoDieselPrice.text = it.toString()
+            totalAlcohol.observe(this@MainActivity, Observer{
+                binding.layoutResult.tvInfoAlcoholPrice.text = it.toString()
             })
         }
     }
@@ -42,10 +42,18 @@ class MainActivity : AppCompatActivity() {
                 val distance = etDistance.text.toString()
                 val km = etKm.text.toString()
                 val gasoline = etGasolinePrice.text.toString()
-                val diesel = etDieselPrice.text.toString()
+                val alcohol = etAlcoholPrice.text.toString()
 
                 viewModel?.calcGasoline(distance.toDouble(), km.toDouble(), gasoline.toDouble())
-                viewModel?.calcDiesel(distance.toDouble(), km.toDouble(), diesel.toDouble())
+                viewModel?.calcAlcohol(distance.toDouble(), km.toDouble(), alcohol.toDouble())
+            }
+
+            btnClear.setOnClickListener {
+                viewModel?.clear()
+                etDistance.setText("")
+                etKm.setText("")
+                etGasolinePrice.setText("")
+                etAlcoholPrice.setText("")
             }
         }
     }

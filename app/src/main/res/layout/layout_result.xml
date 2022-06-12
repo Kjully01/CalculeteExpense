@@ -6,9 +6,6 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
     android:layout_marginVertical="8dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:longClickable="false"
     android:background="@android:color/white"
     android:elevation="48dp"
     app:strokeWidth="2dp"
@@ -38,14 +35,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/custom_text"
-                android:text="Total Gasolina: "/>
+                android:text="@string/total_gasoline"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvDieselPrice"
+                android:id="@+id/tvAlcoholPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 style="@style/custom_text"
-                android:text="Total Diesel: "/>
+                android:text="@string/total_alcohol"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -68,15 +66,14 @@
                 tools:text="20.00"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvInfoDieselPrice"
+                android:id="@+id/tvInfoAlcoholPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 style="@style/custom_text"
                 tools:text="20.00"/>
 
-
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
