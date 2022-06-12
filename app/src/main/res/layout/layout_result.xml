@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="false"
+    android:background="@android:color/white"
+    android:elevation="48dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/border_grey"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/labelContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/infoContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGasolinePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/custom_text"
+                android:text="Total Gasolina: "/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDieselPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/custom_text"
+                android:text="Total Diesel: "/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/infoContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/labelContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInfoGasolinePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/custom_text"
+                tools:text="20.00"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInfoDieselPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/custom_text"
+                tools:text="20.00"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
