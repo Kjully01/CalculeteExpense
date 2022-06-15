@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="8dp"
+    android:layout_marginHorizontal="16dp"
     android:layout_marginVertical="8dp"
     android:background="@android:color/white"
     android:elevation="48dp"
@@ -34,7 +34,7 @@
                 android:id="@+id/tvGasolinePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/custom_text"
+                style="@style/custom_text_result"
                 android:text="@string/total_gasoline"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                style="@style/custom_text"
+                style="@style/custom_text_result"
                 android:text="@string/total_alcohol"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -62,7 +62,7 @@
                 android:id="@+id/tvInfoGasolinePrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/custom_text"
+                style="@style/custom_text_result"
                 tools:text="20.00"/>
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -70,7 +70,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                style="@style/custom_text"
+                style="@style/custom_text_result"
                 tools:text="20.00"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
